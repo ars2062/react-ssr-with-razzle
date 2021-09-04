@@ -11,8 +11,6 @@ import path from "path";
 
 let assetsImport: Record<string, any>;
 import(process.env.RAZZLE_ASSETS_MANIFEST!).then((res) => {
-  console.log(res.default);
-
   assetsImport = res.default;
 });
 
