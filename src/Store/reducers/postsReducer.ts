@@ -1,5 +1,4 @@
-// Import all actions
-import * as actions from "../actions/postActions";
+import { ActionAsyncTypes as actions } from "../actions/postActions";
 
 export const initialState = {
   posts: [],
