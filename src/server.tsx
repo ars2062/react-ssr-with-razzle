@@ -41,11 +41,11 @@ export const renderApp = (req: express.Request, res: express.Response) => {
   const store = configureStore(preloadedState);
 
   const markup = renderToString(
-    <StaticRouter context={context} location={req.url}>
-      <Provider store={store}>
+    <Provider store={store}>
+      <StaticRouter context={context} location={req.url}>
         <App />
-      </Provider>
-    </StaticRouter>
+      </StaticRouter>
+    </Provider>
   );
 
   if (context.url) {

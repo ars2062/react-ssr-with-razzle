@@ -8,11 +8,11 @@ import configureStore from "./Store/configureStore";
 const store = configureStore((window as any).__PRELOADED_STATE__);
 
 hydrate(
-  <BrowserRouter>
-    <Provider store={store}>
+  <Provider store={store}>
+    <BrowserRouter>
       <App />
-    </Provider>
-  </BrowserRouter>,
+    </BrowserRouter>
+  </Provider>,
   document.getElementById("root")
 );
 
